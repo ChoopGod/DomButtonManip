@@ -5,49 +5,141 @@
 
 :root {
   --padding: 8px;
-  --bottoncolor: rgb(227, 252, 223);
-  --bottonHovercolor: rgb(106, 147, 115);
+  --bottoncolor: rgb(252, 223, 223);
+  --bottonHovercolor: #936a6a;
 }
 
 body {
-  max-width: 80vw;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
 }
 
+header {
+  padding: 15px;
+}
+h2 {
+  border: solid 3px red;
+  padding: var(--padding);
+}
+
+.parentborder {
+  border: solid 3px green;
+  padding: var(--padding);
+}
+.siblingborder {
+  border: solid 3px blue;
+  padding: var(--padding);
+}
 main {
   border: solid 1px #333;
   display: grid;
-  grid-template-columns: 6fr 3fr;
+  grid-template-columns: 5fr 3fr;
 }
 
-h1 {
-  text-transform: uppercase;
+section {
+  padding: 15px;
 }
 
-h1,
-h2,
-h3,
-h4,
-section,
-p,
 button {
-  padding: var(--padding);
+  padding: 8px;
+  border-radius: 3px;
+}
+
+footer {
+  padding: 15px;
+  border-top: solid 1px #000;
+}
+
+#btnpanel div:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.example {
+  background-color: var(--bottoncolor);
+  cursor: pointer;
+}
+
+.example:hover {
+  background-color: var(--bottonHovercolor);
+  color: #fff;
+}
+
+/* */
+.tx-color-red {
+  transition: color 1s;
+  color: #f00;
+}
+
+.transform {
+  transition: transform 2s;
+  transform: rotate(360deg);
+}
+
+.tx-big {
+  font-size: 18pt;
+}
+
+.rotate {
+  color: #f00;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.hide {
+  display: none;
+}
+.typo {
+  text-decoration: none;
+  color: deeppink;
+  font-family: fantasy;
+}
+
+.twistbody {
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 button {
   font-size: 20px;
   width: 100%;
-  background-color: var(--bottoncolor);
-  cursor: pointer;
 }
 
-button:hover {
-  background-color: var(--bottonHovercolor);
-  color: #fff;
+button.green {
+  color: green;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
-#btnpanel div:not(:first-of-type) {
-  margin-top: 10px;
+button.purple {
+  color: purple;
+  text-transform: capitalize;
+  background-color: #ffffff;
+}
+
+button.blue {
+  color: #ffffff;
+  text-transform: capitalize;
+  background-color: blue;
+}
+
+ol,
+ul {
+  position: relative;
+  display: block;
 }
